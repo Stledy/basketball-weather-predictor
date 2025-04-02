@@ -1,0 +1,140 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7fafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* Adjusted width for the carousel */
+    text-align: center;
+  }
+  
+  /* Title */
+  h1 {
+    font-size: 1.75rem;
+    color: #4C51BF;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Carousel Styles */
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Set the width to match the container size */
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .carousel-images {
+    display: flex;
+    transition: transform 1s ease;
+  }
+  
+  .carousel-images img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: calc(50% + 151px); /* 4cm ≈ 151px */
+    /* rest of the styles */
+  }
+  
+  
+  .carousel-button.right {
+    right: 10px;
+    transform: translateY(-50%);
+  }
+  
+  /* Input Styles */
+  input, select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  input:focus, select:focus {
+    border-color: #4C51BF;
+    outline: none;
+  }
+  
+  /* Button Styles */
+  button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #4C51BF;
+    color: white;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #434190;
+  }
+  
+  /* Prediction Result */
+  #result {
+    margin-top: 1.5rem;
+    display: none;
+  }
+  
+  #predictionText {
+    font-size: 1.25rem;
+    color: #4C51BF;
+    font-weight: bold;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 480px) {
+    .container {
+      padding: 1rem;
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    input, select {
+      padding: 0.5rem;
+      font-size: 0.9rem;
+    }
+  
+    button {
+      padding: 0.75rem;
+      font-size: 1rem;
+    }
+  }
+  

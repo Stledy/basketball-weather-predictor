@@ -7,15 +7,15 @@ def train_model():
     # Load dataset
     data = pd.read_csv('../data/temperature.csv')
     
-    # Prepare features and target
-    X = data[['Outlook', 'Temp', 'Humidity', 'Windy']]
-    y = data['Play Basketball']
+    # Prepare features and target - use .loc for explicit assignment
+    X = data[['Outlook', 'Temp', 'Humidity', 'Windy']].copy()  # Explicit copy
+    y = data['Play Basketball'].copy()
     
     # Encode categorical variables
     encoders = {}
     for column in X.columns:
         encoders[column] = LabelEncoder()
-        X[column] = encoders[column].fit_transform(X[column])
+        X.loc[:, column] = encoders[column].fit_transform(X[column])  # Fixed line
     
     # Encode target variable
     y_encoder = LabelEncoder()

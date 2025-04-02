@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Launch PHP",
+        "type": "php",
+        "request": "launch",
+        "program": "${file}",
+        "cwd": "${workspaceRoot}/public",
+        "port": 9000,
+        "runtimeArgs": [
+          "-S",
+          "localhost:8000",
+          "-t",
+          "${workspaceRoot}/public"
+        ],
+        "env": {
+          "PYTHONPATH": "${workspaceRoot}/src"
+        }
+      }
+    ]
+  }
